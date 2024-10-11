@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_dmst_muc_bai_viet_nhieu_tags",
+  "info": {
+    "displayName": "Mục bài viết tag theo loại",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "loai_va_tag": {
+      "type": "customField",
+      "customField": "plugin::custom-tag-input.tags"
+    }
+  }
+}

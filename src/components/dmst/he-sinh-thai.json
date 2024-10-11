@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_dmst_he_sinh_thais",
+  "info": {
+    "displayName": "Hệ sinh thái"
+  },
+  "options": {},
+  "attributes": {
+    "dmst_he_sinh_thais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-he-sinh-thai.dmst-he-sinh-thai"
+    }
+  }
+}

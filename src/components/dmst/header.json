@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_dmst_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "dmst_link_don_gians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-link-don-gian.dmst-link-don-gian"
+    }
+  }
+}

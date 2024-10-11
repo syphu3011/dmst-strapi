@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_dmst_muc_bai_viet_theo_tags",
+  "info": {
+    "displayName": "Mục bài viết theo tags"
+  },
+  "options": {},
+  "attributes": {
+    "dmst_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-tag.dmst-tag"
+    }
+  }
+}

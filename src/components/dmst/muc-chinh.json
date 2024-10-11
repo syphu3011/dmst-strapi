@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_dmst_muc_chinhs",
+  "info": {
+    "displayName": "Mục chính",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bai_viet_theo_loai": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dmst.muc-bai-viet"
+    },
+    "tags_theo_loai": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dmst.muc-bai-viet-nhieu-tag"
+    }
+  }
+}

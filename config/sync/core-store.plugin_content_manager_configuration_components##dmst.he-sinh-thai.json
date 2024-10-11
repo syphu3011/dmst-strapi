@@ -1,0 +1,58 @@
+{
+  "key": "plugin_content_manager_configuration_components::dmst.he-sinh-thai",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dmst_he_sinh_thais": {
+        "edit": {
+          "label": "dmst_he_sinh_thais",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "ten"
+        },
+        "list": {
+          "label": "dmst_he_sinh_thais",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "dmst_he_sinh_thais"
+      ],
+      "edit": [
+        [
+          {
+            "name": "dmst_he_sinh_thais",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "dmst.he-sinh-thai",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

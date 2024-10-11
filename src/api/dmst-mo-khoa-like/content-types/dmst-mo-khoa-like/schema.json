@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "dmst_mo_khoa_likes",
+  "info": {
+    "singularName": "dmst-mo-khoa-like",
+    "pluralName": "dmst-mo-khoa-likes",
+    "displayName": "DMST Mở khóa like"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mo": {
+      "type": "boolean"
+    }
+  }
+}

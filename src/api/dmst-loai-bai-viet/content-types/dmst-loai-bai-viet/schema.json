@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_loai_bai_viets",
+  "info": {
+    "singularName": "dmst-loai-bai-viet",
+    "pluralName": "dmst-loai-bai-viets",
+    "displayName": "DMST Loại bài viết",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "loai": {
+      "type": "string"
+    },
+    "dmst_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dmst-tag.dmst-tag",
+      "inversedBy": "dmst_loai_bai_viets"
+    },
+    "dmst_bai_viets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dmst-bai-viet.dmst-bai-viet",
+      "mappedBy": "dmst_loai_bai_viets"
+    }
+  }
+}

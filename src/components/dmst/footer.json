@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_dmst_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "ten_trang": {
+      "type": "string"
+    },
+    "dia_chi": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "so_dien_thoai": {
+      "type": "string"
+    },
+    "dmst_link_don_gians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-link-don-gian.dmst-link-don-gian"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "dmst_headers",
+  "info": {
+    "singularName": "dmst-header",
+    "pluralName": "dmst-headers",
+    "displayName": "DMST Header"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "dmst_link_don_gians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-link-don-gian.dmst-link-don-gian"
+    }
+  }
+}

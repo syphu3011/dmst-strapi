@@ -1,0 +1,207 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::dmst-bai-viet.dmst-bai-viet",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "ten_bai_viet",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "noi_dung_bai_viet": {
+        "edit": {
+          "label": "Nội dung bài viết",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Tên bài viết",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "ten_bai_viet": {
+        "edit": {
+          "label": "Tên bài viết",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ten_bai_viet",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "loai_va_tag": {
+        "edit": {
+          "label": "loai_va_tag",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "loai_va_tag",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dmst_tags": {
+        "edit": {
+          "label": "dmst_tags",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "tag"
+        },
+        "list": {
+          "label": "dmst_tags",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dmst_loai_bai_viets": {
+        "edit": {
+          "label": "dmst_loai_bai_viets",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "loai"
+        },
+        "list": {
+          "label": "dmst_loai_bai_viets",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "like_bai_viet": {
+        "edit": {
+          "label": "like_bai_viet",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "like_bai_viet",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "noi_dung_bai_viet",
+        "ten_bai_viet",
+        "dmst_tags"
+      ],
+      "edit": [
+        [
+          {
+            "name": "ten_bai_viet",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "noi_dung_bai_viet",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "loai_va_tag",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "like_bai_viet",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::dmst-bai-viet.dmst-bai-viet"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

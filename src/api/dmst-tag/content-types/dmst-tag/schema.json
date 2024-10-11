@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_tags",
+  "info": {
+    "singularName": "dmst-tag",
+    "pluralName": "dmst-tags",
+    "displayName": "DMST Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "dmst_loai_bai_viets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
+      "mappedBy": "dmst_tags"
+    },
+    "dmst_bai_viets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dmst-bai-viet.dmst-bai-viet",
+      "mappedBy": "dmst_tags"
+    }
+  }
+}

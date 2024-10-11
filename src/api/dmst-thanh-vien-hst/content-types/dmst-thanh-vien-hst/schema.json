@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_thanh_vien_hsts",
+  "info": {
+    "singularName": "dmst-thanh-vien-hst",
+    "pluralName": "dmst-thanh-vien-hsts",
+    "displayName": "DMST Thành viên HST",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ten_thanh_vien": {
+      "type": "string"
+    },
+    "mo_ta": {
+      "type": "text"
+    },
+    "noi_dung_bai_viet": {
+      "type": "component",
+      "repeatable": false,
+      "component": "reuse-component.bai-viet"
+    },
+    "dmst_he_sinh_thai": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dmst-he-sinh-thai.dmst-he-sinh-thai",
+      "inversedBy": "dmst_thanh_vien_hsts"
+    }
+  }
+}

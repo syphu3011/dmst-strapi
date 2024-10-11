@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "dmst_trang_chus",
+  "info": {
+    "singularName": "dmst-trang-chu",
+    "pluralName": "dmst-trang-chus",
+    "displayName": "DMST Trang chủ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "noi_dung": {
+      "type": "dynamiczone",
+      "components": [
+        "dmst.he-sinh-thai",
+        "dmst.muc-sau",
+        "dmst.muc-bai-viet",
+        "dmst.muc-bai-viet-nhieu-tag",
+        "dmst.muc-chinh",
+        "dmst.muc-bai-viet-theo-tags",
+        "dmst.banner"
+      ]
+    },
+    "Header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dmst.header"
+    },
+    "Footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dmst.footer"
+    }
+  }
+}

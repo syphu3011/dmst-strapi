@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_link_don_gians",
+  "info": {
+    "singularName": "dmst-link-don-gian",
+    "pluralName": "dmst-link-don-gians",
+    "displayName": "DMST Link đơn giản"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ten": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

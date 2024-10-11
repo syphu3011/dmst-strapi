@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_banners",
+  "info": {
+    "singularName": "dmst-banner",
+    "pluralName": "dmst-banners",
+    "displayName": "DMST Banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "anh_banner": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

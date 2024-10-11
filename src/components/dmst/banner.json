@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_dmst_banners",
+  "info": {
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dmst_banners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-banner.dmst-banner"
+    }
+  }
+}

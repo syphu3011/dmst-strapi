@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_he_sinh_thais",
+  "info": {
+    "singularName": "dmst-he-sinh-thai",
+    "pluralName": "dmst-he-sinh-thais",
+    "displayName": "DMST Hệ sinh thái"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "anh_dai_dien": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ten": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "dmst_thanh_vien_hsts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-thanh-vien-hst.dmst-thanh-vien-hst",
+      "mappedBy": "dmst_he_sinh_thai"
+    }
+  }
+}

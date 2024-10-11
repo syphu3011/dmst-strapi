@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_reuse_component_bai_viets",
+  "info": {
+    "displayName": "Bài viết",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mo_ta": {
+      "type": "text"
+    },
+    "tac_gia": {
+      "type": "string"
+    },
+    "nguon": {
+      "type": "string"
+    },
+    "noi_dung": {
+      "type": "customField",
+      "options": {
+        "preset": "default"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "heheh": {
+      "type": "richtext"
+    }
+  }
+}

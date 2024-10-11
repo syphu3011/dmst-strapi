@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_dmst_muc_bai_viets",
+  "info": {
+    "displayName": "Mục bài viết theo loại",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dmst_loai_bai_viets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dmst-loai-bai-viet.dmst-loai-bai-viet"
+    }
+  }
+}

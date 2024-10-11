@@ -1,0 +1,175 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::dmst-thanh-vien-hst.dmst-thanh-vien-hst",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "ten_thanh_vien",
+      "defaultSortBy": "ten_thanh_vien",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ten_thanh_vien": {
+        "edit": {
+          "label": "ten_thanh_vien",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ten_thanh_vien",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "mo_ta": {
+        "edit": {
+          "label": "mo_ta",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "mo_ta",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "noi_dung_bai_viet": {
+        "edit": {
+          "label": "noi_dung_bai_viet",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "noi_dung_bai_viet",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dmst_he_sinh_thai": {
+        "edit": {
+          "label": "dmst_he_sinh_thai",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "ten"
+        },
+        "list": {
+          "label": "dmst_he_sinh_thai",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "ten_thanh_vien",
+        "mo_ta",
+        "noi_dung_bai_viet"
+      ],
+      "edit": [
+        [
+          {
+            "name": "ten_thanh_vien",
+            "size": 6
+          },
+          {
+            "name": "mo_ta",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "noi_dung_bai_viet",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "dmst_he_sinh_thai",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::dmst-thanh-vien-hst.dmst-thanh-vien-hst"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

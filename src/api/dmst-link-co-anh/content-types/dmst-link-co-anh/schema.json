@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_link_co_anhs",
+  "info": {
+    "singularName": "dmst-link-co-anh",
+    "pluralName": "dmst-link-co-anhs",
+    "displayName": "DMST Link có ảnh"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "anh": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ten": {
+      "type": "string"
+    }
+  }
+}

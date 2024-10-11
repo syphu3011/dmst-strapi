@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_videos",
+  "info": {
+    "singularName": "dmst-video",
+    "pluralName": "dmst-videos",
+    "displayName": "DMST Video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mo_ta": {
+      "type": "text"
+    },
+    "ten_video": {
+      "type": "string"
+    },
+    "link_embed": {
+      "type": "string"
+    }
+  }
+}

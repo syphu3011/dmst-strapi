@@ -1,0 +1,231 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::audit-log.audit-log",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "action",
+      "defaultSortBy": "action",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "action": {
+        "edit": {
+          "label": "action",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "action",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "entity": {
+        "edit": {
+          "label": "entity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "entity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "entityId": {
+        "edit": {
+          "label": "entityId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "entityId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "oldData": {
+        "edit": {
+          "label": "oldData",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "oldData",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "newData": {
+        "edit": {
+          "label": "newData",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "newData",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "timestamp": {
+        "edit": {
+          "label": "timestamp",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "timestamp",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "user": {
+        "edit": {
+          "label": "user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "action",
+            "size": 6
+          },
+          {
+            "name": "entity",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "entityId",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "oldData",
+            "size": 6
+          },
+          {
+            "name": "newData",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "timestamp",
+            "size": 6
+          },
+          {
+            "name": "user",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "action",
+        "entity",
+        "entityId"
+      ]
+    },
+    "uid": "api::audit-log.audit-log"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,156 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::dmst-tag.dmst-tag",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "tag",
+      "defaultSortBy": "tag",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "tag": {
+        "edit": {
+          "label": "tag",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "tag",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "dmst_loai_bai_viets": {
+        "edit": {
+          "label": "dmst_loai_bai_viets",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "loai"
+        },
+        "list": {
+          "label": "dmst_loai_bai_viets",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dmst_bai_viets": {
+        "edit": {
+          "label": "dmst_bai_viets",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "ten_bai_viet"
+        },
+        "list": {
+          "label": "dmst_bai_viets",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "tag",
+        "createdAt",
+        "updatedAt"
+      ],
+      "edit": [
+        [
+          {
+            "name": "tag",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "dmst_loai_bai_viets",
+            "size": 6
+          },
+          {
+            "name": "dmst_bai_viets",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::dmst-tag.dmst-tag"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

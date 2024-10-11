@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "like_bai_viets",
+  "info": {
+    "singularName": "like-bai-viet",
+    "pluralName": "like-bai-viets",
+    "displayName": "Like Bài viết",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "like": {
+      "type": "integer"
+    },
+    "dmst_bai_viet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dmst-bai-viet.dmst-bai-viet",
+      "inversedBy": "like_bai_viet"
+    }
+  }
+}
