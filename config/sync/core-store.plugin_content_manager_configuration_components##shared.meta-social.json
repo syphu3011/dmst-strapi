@@ -1,13 +1,13 @@
 {
-  "key": "plugin_content_manager_configuration_components::reuse-component.bai-viet",
+  "key": "plugin_content_manager_configuration_components::shared.meta-social",
   "value": {
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "tac_gia",
-      "defaultSortBy": "tac_gia",
+      "mainField": "title",
+      "defaultSortBy": "title",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -19,58 +19,58 @@
           "sortable": false
         }
       },
-      "mo_ta": {
+      "socialNetwork": {
         "edit": {
-          "label": "mo_ta",
+          "label": "socialNetwork",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "mo_ta",
+          "label": "socialNetwork",
           "searchable": true,
           "sortable": true
         }
       },
-      "tac_gia": {
+      "title": {
         "edit": {
-          "label": "tac_gia",
+          "label": "title",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "tac_gia",
+          "label": "title",
           "searchable": true,
           "sortable": true
         }
       },
-      "nguon": {
+      "description": {
         "edit": {
-          "label": "nguon",
+          "label": "description",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "nguon",
+          "label": "description",
           "searchable": true,
           "sortable": true
         }
       },
-      "noi_dung": {
+      "image": {
         "edit": {
-          "label": "noi_dung",
+          "label": "image",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "noi_dung",
+          "label": "image",
           "searchable": false,
           "sortable": false
         }
@@ -79,36 +79,34 @@
     "layouts": {
       "list": [
         "id",
-        "mo_ta",
-        "tac_gia",
-        "nguon"
+        "socialNetwork",
+        "title",
+        "description"
       ],
       "edit": [
         [
           {
-            "name": "mo_ta",
+            "name": "socialNetwork",
             "size": 6
           },
           {
-            "name": "tac_gia",
+            "name": "title",
             "size": 6
           }
         ],
         [
           {
-            "name": "nguon",
+            "name": "description",
             "size": 6
-          }
-        ],
-        [
+          },
           {
-            "name": "noi_dung",
-            "size": 12
+            "name": "image",
+            "size": 6
           }
         ]
       ]
     },
-    "uid": "reuse-component.bai-viet",
+    "uid": "shared.meta-social",
     "isComponent": true
   },
   "type": "object",

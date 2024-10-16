@@ -76,12 +76,25 @@
         "fields": [
           "noi_dung_bai_viet.mo_ta",
           "noi_dung_bai_viet.tac_gia",
-          "noi_dung_bai_viet.noi_dung",
           "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
           "ten_bai_viet",
           "loai_va_tag",
           "dmst_tags",
           "dmst_loai_bai_viets",
+          "slug",
+          "SEO.metaTitle",
+          "SEO.metaDescription",
+          "SEO.metaImage",
+          "SEO.metaSocial.socialNetwork",
+          "SEO.metaSocial.title",
+          "SEO.metaSocial.description",
+          "SEO.metaSocial.image",
+          "SEO.keywords",
+          "SEO.metaRobots",
+          "SEO.structuredData",
+          "SEO.metaViewport",
+          "SEO.canonicalURL",
           "like_bai_viet"
         ]
       },
@@ -109,12 +122,25 @@
         "fields": [
           "noi_dung_bai_viet.mo_ta",
           "noi_dung_bai_viet.tac_gia",
-          "noi_dung_bai_viet.noi_dung",
           "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
           "ten_bai_viet",
           "loai_va_tag",
           "dmst_tags",
           "dmst_loai_bai_viets",
+          "slug",
+          "SEO.metaTitle",
+          "SEO.metaDescription",
+          "SEO.metaImage",
+          "SEO.metaSocial.socialNetwork",
+          "SEO.metaSocial.title",
+          "SEO.metaSocial.description",
+          "SEO.metaSocial.image",
+          "SEO.keywords",
+          "SEO.metaRobots",
+          "SEO.structuredData",
+          "SEO.metaViewport",
+          "SEO.canonicalURL",
           "like_bai_viet"
         ]
       },
@@ -128,12 +154,25 @@
         "fields": [
           "noi_dung_bai_viet.mo_ta",
           "noi_dung_bai_viet.tac_gia",
-          "noi_dung_bai_viet.noi_dung",
           "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
           "ten_bai_viet",
           "loai_va_tag",
           "dmst_tags",
           "dmst_loai_bai_viets",
+          "slug",
+          "SEO.metaTitle",
+          "SEO.metaDescription",
+          "SEO.metaImage",
+          "SEO.metaSocial.socialNetwork",
+          "SEO.metaSocial.title",
+          "SEO.metaSocial.description",
+          "SEO.metaSocial.image",
+          "SEO.keywords",
+          "SEO.metaRobots",
+          "SEO.structuredData",
+          "SEO.metaViewport",
+          "SEO.canonicalURL",
           "like_bai_viet"
         ]
       },
@@ -561,8 +600,8 @@
           "mo_ta",
           "noi_dung_bai_viet.mo_ta",
           "noi_dung_bai_viet.tac_gia",
-          "noi_dung_bai_viet.noi_dung",
           "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
           "dmst_he_sinh_thai"
         ]
       },
@@ -585,8 +624,8 @@
           "mo_ta",
           "noi_dung_bai_viet.mo_ta",
           "noi_dung_bai_viet.tac_gia",
-          "noi_dung_bai_viet.noi_dung",
           "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
           "dmst_he_sinh_thai"
         ]
       },
@@ -602,8 +641,8 @@
           "mo_ta",
           "noi_dung_bai_viet.mo_ta",
           "noi_dung_bai_viet.tac_gia",
-          "noi_dung_bai_viet.noi_dung",
           "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
           "dmst_he_sinh_thai"
         ]
       },
@@ -737,7 +776,7 @@
       "properties": {
         "fields": [
           "like",
-          "dmst_bai_viet"
+          "dmst_bai_viets"
         ]
       },
       "conditions": []
@@ -750,20 +789,13 @@
       "conditions": []
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::like-bai-viet.like-bai-viet",
-      "properties": {},
-      "conditions": []
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::like-bai-viet.like-bai-viet",
       "properties": {
         "fields": [
           "like",
-          "dmst_bai_viet"
+          "dmst_bai_viets"
         ]
       },
       "conditions": []
@@ -775,7 +807,7 @@
       "properties": {
         "fields": [
           "like",
-          "dmst_bai_viet"
+          "dmst_bai_viets"
         ]
       },
       "conditions": []
@@ -1000,6 +1032,55 @@
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "selectedContentType",
+          "structure"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "selectedContentType",
+          "structure"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "selectedContentType",
+          "structure"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
       "subject": "plugin::users-permissions.user",
       "properties": {
         "fields": [
@@ -1076,28 +1157,7 @@
       "conditions": []
     },
     {
-      "action": "plugin::documentation.read",
-      "actionParameters": {},
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::documentation.settings.read",
-      "actionParameters": {},
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::documentation.settings.regenerate",
-      "actionParameters": {},
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::documentation.settings.update",
+      "action": "plugin::content-versioning.save",
       "actionParameters": {},
       "subject": null,
       "properties": {},
@@ -1133,6 +1193,34 @@
     },
     {
       "action": "plugin::i18n.locale.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::rest-cache.cache.purge",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::rest-cache.cache.read-provider",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::rest-cache.cache.read-strategy",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::seo.read",
       "actionParameters": {},
       "subject": null,
       "properties": {},

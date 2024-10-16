@@ -1,7 +1,6 @@
 export default [
   "strapi::logger",
   "strapi::errors",
-  "strapi::security",
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::query",
@@ -9,5 +8,22 @@ export default [
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
-  "global::audit-log"
+  "global::audit-log",
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        directives: {
+          "script-src": ["'self'", "'unsafe-inline'"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "https://images.squarespace-cdn.com/",
+            "strapi.io",
+          ],
+        },
+      },
+    },
+  },
+  "global::error-global-handling",
 ];

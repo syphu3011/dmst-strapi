@@ -941,13 +941,13 @@ export interface ApiDmstBaiVietDmstBaiViet extends Schema.CollectionType {
       'manyToMany',
       'api::dmst-loai-bai-viet.dmst-loai-bai-viet'
     >;
-    like_bai_viet: Attribute.Relation<
-      'api::dmst-bai-viet.dmst-bai-viet',
-      'oneToOne',
-      'api::like-bai-viet.like-bai-viet'
-    >;
     slug: Attribute.Text;
     SEO: Attribute.Component<'shared.seo'>;
+    like_bai_viet: Attribute.Relation<
+      'api::dmst-bai-viet.dmst-bai-viet',
+      'manyToOne',
+      'api::like-bai-viet.like-bai-viet'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1152,7 +1152,7 @@ export interface ApiDmstLoaiBaiVietDmstLoaiBaiViet
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     loai: Attribute.String;
@@ -1168,7 +1168,6 @@ export interface ApiDmstLoaiBaiVietDmstLoaiBaiViet
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::dmst-loai-bai-viet.dmst-loai-bai-viet',
       'oneToOne',
@@ -1381,9 +1380,9 @@ export interface ApiLikeBaiVietLikeBaiViet extends Schema.CollectionType {
   };
   attributes: {
     like: Attribute.Integer;
-    dmst_bai_viet: Attribute.Relation<
+    dmst_bai_viets: Attribute.Relation<
       'api::like-bai-viet.like-bai-viet',
-      'oneToOne',
+      'oneToMany',
       'api::dmst-bai-viet.dmst-bai-viet'
     >;
     createdAt: Attribute.DateTime;

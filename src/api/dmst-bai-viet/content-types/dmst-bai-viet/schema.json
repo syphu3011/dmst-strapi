@@ -40,12 +40,6 @@
       "target": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
       "inversedBy": "dmst_bai_viets"
     },
-    "like_bai_viet": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::like-bai-viet.like-bai-viet",
-      "mappedBy": "dmst_bai_viet"
-    },
     "slug": {
       "type": "text"
     },
@@ -53,6 +47,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "like_bai_viet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::like-bai-viet.like-bai-viet",
+      "inversedBy": "dmst_bai_viets"
     }
   }
 }

@@ -21,7 +21,7 @@
       },
       "noi_dung": {
         "edit": {
-          "label": "Nội dung",
+          "label": "noi_dung",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -123,20 +123,20 @@
     "layouts": {
       "list": [
         "id",
-        "createdAt",
-        "updatedAt",
-        "createdBy"
+        "Header",
+        "Footer",
+        "createdAt"
       ],
       "edit": [
         [
           {
-            "name": "Header",
+            "name": "noi_dung",
             "size": 12
           }
         ],
         [
           {
-            "name": "noi_dung",
+            "name": "Header",
             "size": 12
           }
         ],

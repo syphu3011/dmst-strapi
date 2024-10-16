@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "ten_bai_viet",
-      "defaultSortBy": "id",
+      "defaultSortBy": "ten_bai_viet",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -28,7 +28,7 @@
           "editable": true
         },
         "list": {
-          "label": "Tên bài viết",
+          "label": "noi_dung_bai_viet",
           "searchable": false,
           "sortable": false
         }
@@ -49,7 +49,7 @@
       },
       "loai_va_tag": {
         "edit": {
-          "label": "loai_va_tag",
+          "label": "Loại và tags",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -91,14 +91,42 @@
           "sortable": false
         }
       },
+      "slug": {
+        "edit": {
+          "label": "slug",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "SEO": {
+        "edit": {
+          "label": "SEO",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "SEO",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "like_bai_viet": {
         "edit": {
-          "label": "like_bai_viet",
+          "label": "Like",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true,
-          "mainField": "id"
+          "mainField": "like"
         },
         "list": {
           "label": "like_bai_viet",
@@ -166,12 +194,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "noi_dung_bai_viet",
-        "ten_bai_viet",
-        "dmst_tags"
-      ],
       "edit": [
         [
           {
@@ -193,10 +215,28 @@
         ],
         [
           {
+            "name": "slug",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "SEO",
+            "size": 12
+          }
+        ],
+        [
+          {
             "name": "like_bai_viet",
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "noi_dung_bai_viet",
+        "ten_bai_viet",
+        "dmst_tags"
       ]
     },
     "uid": "api::dmst-bai-viet.dmst-bai-viet"

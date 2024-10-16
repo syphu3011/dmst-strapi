@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "ten_video",
-      "defaultSortBy": "id",
+      "defaultSortBy": "ten_video",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -121,8 +121,18 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "mo_ta",
+        "ten_video",
+        "link_embed"
+      ],
       "edit": [
         [
+          {
+            "name": "mo_ta",
+            "size": 6
+          },
           {
             "name": "ten_video",
             "size": 6
@@ -132,18 +142,8 @@
           {
             "name": "link_embed",
             "size": 6
-          },
-          {
-            "name": "mo_ta",
-            "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "mo_ta",
-        "createdAt",
-        "ten_video"
       ]
     },
     "uid": "api::dmst-video.dmst-video"

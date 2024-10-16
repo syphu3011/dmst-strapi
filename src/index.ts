@@ -20,6 +20,10 @@ export default {
    * run jobs, or perform some special logic.
    */
   bootstrap({ strapi }: { strapi: Strapi }) {
+    process.on("uncaughtException", (error) => {
+      console.error("Uncaught Exception:", error);
+      // Có thể thêm logic để gửi thông báo hoặc ghi log
+    });
     // socketConfig(strapi);
     const io = new Server(strapi.server.httpServer, {
       cors: {

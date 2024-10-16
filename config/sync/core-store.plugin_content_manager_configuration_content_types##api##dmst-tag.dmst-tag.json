@@ -126,21 +126,21 @@
       "list": [
         "id",
         "tag",
-        "createdAt",
-        "updatedAt"
+        "dmst_loai_bai_viets",
+        "dmst_bai_viets"
       ],
       "edit": [
         [
           {
             "name": "tag",
             "size": 6
-          }
-        ],
-        [
+          },
           {
             "name": "dmst_loai_bai_viets",
             "size": 6
-          },
+          }
+        ],
+        [
           {
             "name": "dmst_bai_viets",
             "size": 6

@@ -61,14 +61,7 @@ export interface ReuseComponentBaiViet extends Schema.Component {
     mo_ta: Attribute.Text;
     tac_gia: Attribute.String;
     nguon: Attribute.String;
-    noi_dung: Attribute.RichText &
-      Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'default';
-        }
-      >;
-    heheh: Attribute.RichText;
+    noi_dung: Attribute.RichText;
   };
 }
 

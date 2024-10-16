@@ -55,7 +55,6 @@ function isIgnore(event: any) {
 // Hàm ghi log cho mỗi sự kiện
 async function logAuditEvent(event: any, action: string) {
   const { params, model } = event;
-  console.log(params)
   const entityId = params?.where?.id;
 
   // Fetch old data for update and delete actions

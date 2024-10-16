@@ -4,42 +4,6 @@
   "type": "public",
   "permissions": [
     {
-      "action": "api::dmst-bai-viet.dmst-bai-viet.find"
-    },
-    {
-      "action": "api::dmst-bai-viet.dmst-bai-viet.findOne"
-    },
-    {
-      "action": "api::dmst-loai-bai-viet.dmst-loai-bai-viet.find"
-    },
-    {
-      "action": "api::dmst-loai-bai-viet.dmst-loai-bai-viet.findOne"
-    },
-    {
-      "action": "api::dmst-mo-khoa-like.dmst-mo-khoa-like.find"
-    },
-    {
-      "action": "api::dmst-tag.dmst-tag.find"
-    },
-    {
-      "action": "api::dmst-tag.dmst-tag.findByArticleType"
-    },
-    {
-      "action": "api::dmst-tag.dmst-tag.findOne"
-    },
-    {
-      "action": "api::dmst-trang-chu.dmst-trang-chu.find"
-    },
-    {
-      "action": "api::dmst-trang-chu.dmst-trang-chu.getFooter"
-    },
-    {
-      "action": "api::dmst-trang-chu.dmst-trang-chu.getHeader"
-    },
-    {
-      "action": "api::dmst-trang-chu.dmst-trang-chu.getHeaderFooter"
-    },
-    {
       "action": "plugin::users-permissions.auth.callback"
     },
     {

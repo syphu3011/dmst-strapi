@@ -15,11 +15,11 @@
     "like": {
       "type": "integer"
     },
-    "dmst_bai_viet": {
+    "dmst_bai_viets": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::dmst-bai-viet.dmst-bai-viet",
-      "inversedBy": "like_bai_viet"
+      "mappedBy": "like_bai_viet"
     }
   }
 }

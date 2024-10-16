@@ -6,7 +6,7 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "like",
+      "mainField": "id",
       "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
@@ -33,9 +33,9 @@
           "sortable": true
         }
       },
-      "dmst_bai_viet": {
+      "dmst_bai_viets": {
         "edit": {
-          "label": "dmst_bai_viet",
+          "label": "dmst_bai_viets",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -43,9 +43,9 @@
           "mainField": "ten_bai_viet"
         },
         "list": {
-          "label": "dmst_bai_viet",
-          "searchable": true,
-          "sortable": true
+          "label": "dmst_bai_viets",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -108,6 +108,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "like",
+        "dmst_bai_viets",
+        "createdAt"
+      ],
       "edit": [
         [
           {
@@ -115,16 +121,10 @@
             "size": 4
           },
           {
-            "name": "dmst_bai_viet",
+            "name": "dmst_bai_viets",
             "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "like",
-        "createdAt",
-        "updatedAt"
       ]
     },
     "uid": "api::like-bai-viet.like-bai-viet"

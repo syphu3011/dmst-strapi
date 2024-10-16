@@ -2,7 +2,15 @@
   "extends": "@strapi/typescript-utils/tsconfigs/server",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": ".",
+    "strict": false,
+    "skipLibCheck": true,
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",  // File cache thông tin build
+    "sourceMap": false,  // Tắt source maps nếu không cần để tăng tốc build
+    "declaration": false,  // Tắt file .d.ts nếu không cần
+    "moduleResolution": "node",
+    "noEmitOnError": false,
   },
   "include": [
     "./",

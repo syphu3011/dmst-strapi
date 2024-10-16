@@ -4,6 +4,900 @@
   "description": "Authors can manage the content they have created.",
   "permissions": [
     {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::audit-log.audit-log",
+      "properties": {
+        "fields": [
+          "action",
+          "entity",
+          "entityId",
+          "oldData",
+          "newData",
+          "timestamp",
+          "user"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::audit-log.audit-log",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::audit-log.audit-log",
+      "properties": {
+        "fields": [
+          "action",
+          "entity",
+          "entityId",
+          "oldData",
+          "newData",
+          "timestamp",
+          "user"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::audit-log.audit-log",
+      "properties": {
+        "fields": [
+          "action",
+          "entity",
+          "entityId",
+          "oldData",
+          "newData",
+          "timestamp",
+          "user"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-bai-viet.dmst-bai-viet",
+      "properties": {
+        "fields": [
+          "noi_dung_bai_viet.mo_ta",
+          "noi_dung_bai_viet.tac_gia",
+          "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
+          "ten_bai_viet",
+          "loai_va_tag",
+          "dmst_tags",
+          "dmst_loai_bai_viets",
+          "slug",
+          "SEO.metaTitle",
+          "SEO.metaDescription",
+          "SEO.metaImage",
+          "SEO.metaSocial.socialNetwork",
+          "SEO.metaSocial.title",
+          "SEO.metaSocial.description",
+          "SEO.metaSocial.image",
+          "SEO.keywords",
+          "SEO.metaRobots",
+          "SEO.structuredData",
+          "SEO.metaViewport",
+          "SEO.canonicalURL",
+          "like_bai_viet"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-bai-viet.dmst-bai-viet",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-bai-viet.dmst-bai-viet",
+      "properties": {
+        "fields": [
+          "noi_dung_bai_viet.mo_ta",
+          "noi_dung_bai_viet.tac_gia",
+          "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
+          "ten_bai_viet",
+          "loai_va_tag",
+          "dmst_tags",
+          "dmst_loai_bai_viets",
+          "slug",
+          "SEO.metaTitle",
+          "SEO.metaDescription",
+          "SEO.metaImage",
+          "SEO.metaSocial.socialNetwork",
+          "SEO.metaSocial.title",
+          "SEO.metaSocial.description",
+          "SEO.metaSocial.image",
+          "SEO.keywords",
+          "SEO.metaRobots",
+          "SEO.structuredData",
+          "SEO.metaViewport",
+          "SEO.canonicalURL",
+          "like_bai_viet"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-bai-viet.dmst-bai-viet",
+      "properties": {
+        "fields": [
+          "noi_dung_bai_viet.mo_ta",
+          "noi_dung_bai_viet.tac_gia",
+          "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
+          "ten_bai_viet",
+          "loai_va_tag",
+          "dmst_tags",
+          "dmst_loai_bai_viets",
+          "slug",
+          "SEO.metaTitle",
+          "SEO.metaDescription",
+          "SEO.metaImage",
+          "SEO.metaSocial.socialNetwork",
+          "SEO.metaSocial.title",
+          "SEO.metaSocial.description",
+          "SEO.metaSocial.image",
+          "SEO.keywords",
+          "SEO.metaRobots",
+          "SEO.structuredData",
+          "SEO.metaViewport",
+          "SEO.canonicalURL",
+          "like_bai_viet"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-banner.dmst-banner",
+      "properties": {
+        "fields": [
+          "anh_banner",
+          "link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-banner.dmst-banner",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-banner.dmst-banner",
+      "properties": {
+        "fields": [
+          "anh_banner",
+          "link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-banner.dmst-banner",
+      "properties": {
+        "fields": [
+          "anh_banner",
+          "link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-he-sinh-thai.dmst-he-sinh-thai",
+      "properties": {
+        "fields": [
+          "anh_dai_dien",
+          "ten",
+          "link",
+          "dmst_thanh_vien_hsts"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-he-sinh-thai.dmst-he-sinh-thai",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-he-sinh-thai.dmst-he-sinh-thai",
+      "properties": {
+        "fields": [
+          "anh_dai_dien",
+          "ten",
+          "link",
+          "dmst_thanh_vien_hsts"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-he-sinh-thai.dmst-he-sinh-thai",
+      "properties": {
+        "fields": [
+          "anh_dai_dien",
+          "ten",
+          "link",
+          "dmst_thanh_vien_hsts"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-header.dmst-header",
+      "properties": {
+        "fields": [
+          "Logo",
+          "dmst_link_don_gians"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-header.dmst-header",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-header.dmst-header",
+      "properties": {
+        "fields": [
+          "Logo",
+          "dmst_link_don_gians"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-header.dmst-header",
+      "properties": {
+        "fields": [
+          "Logo",
+          "dmst_link_don_gians"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-link-co-anh.dmst-link-co-anh",
+      "properties": {
+        "fields": [
+          "link",
+          "anh",
+          "ten"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-link-co-anh.dmst-link-co-anh",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-link-co-anh.dmst-link-co-anh",
+      "properties": {
+        "fields": [
+          "link",
+          "anh",
+          "ten"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-link-co-anh.dmst-link-co-anh",
+      "properties": {
+        "fields": [
+          "link",
+          "anh",
+          "ten"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-link-don-gian.dmst-link-don-gian",
+      "properties": {
+        "fields": [
+          "ten",
+          "link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-link-don-gian.dmst-link-don-gian",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-link-don-gian.dmst-link-don-gian",
+      "properties": {
+        "fields": [
+          "ten",
+          "link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-link-don-gian.dmst-link-don-gian",
+      "properties": {
+        "fields": [
+          "ten",
+          "link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
+      "properties": {
+        "fields": [
+          "loai",
+          "dmst_tags",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
+      "properties": {
+        "fields": [
+          "loai",
+          "dmst_tags",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
+      "properties": {
+        "fields": [
+          "loai",
+          "dmst_tags",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-mo-khoa-like.dmst-mo-khoa-like",
+      "properties": {
+        "fields": [
+          "mo"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-mo-khoa-like.dmst-mo-khoa-like",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-mo-khoa-like.dmst-mo-khoa-like",
+      "properties": {
+        "fields": [
+          "mo"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-mo-khoa-like.dmst-mo-khoa-like",
+      "properties": {
+        "fields": [
+          "mo"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-tag.dmst-tag",
+      "properties": {
+        "fields": [
+          "tag",
+          "dmst_loai_bai_viets",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-tag.dmst-tag",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-tag.dmst-tag",
+      "properties": {
+        "fields": [
+          "tag",
+          "dmst_loai_bai_viets",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-tag.dmst-tag",
+      "properties": {
+        "fields": [
+          "tag",
+          "dmst_loai_bai_viets",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-thanh-vien-hst.dmst-thanh-vien-hst",
+      "properties": {
+        "fields": [
+          "ten_thanh_vien",
+          "mo_ta",
+          "noi_dung_bai_viet.mo_ta",
+          "noi_dung_bai_viet.tac_gia",
+          "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
+          "dmst_he_sinh_thai"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-thanh-vien-hst.dmst-thanh-vien-hst",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-thanh-vien-hst.dmst-thanh-vien-hst",
+      "properties": {
+        "fields": [
+          "ten_thanh_vien",
+          "mo_ta",
+          "noi_dung_bai_viet.mo_ta",
+          "noi_dung_bai_viet.tac_gia",
+          "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
+          "dmst_he_sinh_thai"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-thanh-vien-hst.dmst-thanh-vien-hst",
+      "properties": {
+        "fields": [
+          "ten_thanh_vien",
+          "mo_ta",
+          "noi_dung_bai_viet.mo_ta",
+          "noi_dung_bai_viet.tac_gia",
+          "noi_dung_bai_viet.nguon",
+          "noi_dung_bai_viet.noi_dung",
+          "dmst_he_sinh_thai"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-trang-chu.dmst-trang-chu",
+      "properties": {
+        "fields": [
+          "noi_dung",
+          "Header.logo",
+          "Header.dmst_link_don_gians",
+          "Footer.ten_trang",
+          "Footer.dia_chi",
+          "Footer.email",
+          "Footer.so_dien_thoai",
+          "Footer.dmst_link_don_gians"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-trang-chu.dmst-trang-chu",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-trang-chu.dmst-trang-chu",
+      "properties": {
+        "fields": [
+          "noi_dung",
+          "Header.logo",
+          "Header.dmst_link_don_gians",
+          "Footer.ten_trang",
+          "Footer.dia_chi",
+          "Footer.email",
+          "Footer.so_dien_thoai",
+          "Footer.dmst_link_don_gians"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-trang-chu.dmst-trang-chu",
+      "properties": {
+        "fields": [
+          "noi_dung",
+          "Header.logo",
+          "Header.dmst_link_don_gians",
+          "Footer.ten_trang",
+          "Footer.dia_chi",
+          "Footer.email",
+          "Footer.so_dien_thoai",
+          "Footer.dmst_link_don_gians"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::dmst-video.dmst-video",
+      "properties": {
+        "fields": [
+          "mo_ta",
+          "ten_video",
+          "link_embed"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::dmst-video.dmst-video",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::dmst-video.dmst-video",
+      "properties": {
+        "fields": [
+          "mo_ta",
+          "ten_video",
+          "link_embed"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::dmst-video.dmst-video",
+      "properties": {
+        "fields": [
+          "mo_ta",
+          "ten_video",
+          "link_embed"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::like-bai-viet.like-bai-viet",
+      "properties": {
+        "fields": [
+          "like",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::like-bai-viet.like-bai-viet",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::like-bai-viet.like-bai-viet",
+      "properties": {
+        "fields": [
+          "like",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::like-bai-viet.like-bai-viet",
+      "properties": {
+        "fields": [
+          "like",
+          "dmst_bai_viets"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "selectedContentType",
+          "structure"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "selectedContentType",
+          "structure"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "plugin::custom-api.custom-api",
+      "properties": {
+        "fields": [
+          "name",
+          "slug",
+          "selectedContentType",
+          "structure"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
       "action": "plugin::upload.assets.copy-link",
       "actionParameters": {},
       "subject": null,

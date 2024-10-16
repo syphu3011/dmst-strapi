@@ -1,13 +1,13 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::dmst-loai-bai-viet.dmst-loai-bai-viet",
+  "key": "plugin_content_manager_configuration_content_types::plugin::slugify.slug",
   "value": {
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "loai",
-      "defaultSortBy": "loai",
+      "mainField": "id",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -19,48 +19,32 @@
           "sortable": true
         }
       },
-      "loai": {
+      "slug": {
         "edit": {
-          "label": "loai",
+          "label": "slug",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "loai",
+          "label": "slug",
           "searchable": true,
           "sortable": true
         }
       },
-      "dmst_tags": {
+      "count": {
         "edit": {
-          "label": "dmst_tags",
+          "label": "count",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true,
-          "mainField": "tag"
+          "editable": true
         },
         "list": {
-          "label": "dmst_tags",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "dmst_bai_viets": {
-        "edit": {
-          "label": "dmst_bai_viets",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "ten_bai_viet"
-        },
-        "list": {
-          "label": "dmst_bai_viets",
-          "searchable": false,
-          "sortable": false
+          "label": "count",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -125,30 +109,24 @@
     "layouts": {
       "list": [
         "id",
-        "loai",
-        "dmst_tags",
-        "dmst_bai_viets"
+        "slug",
+        "count",
+        "createdAt"
       ],
       "edit": [
         [
           {
-            "name": "loai",
+            "name": "slug",
             "size": 6
           },
           {
-            "name": "dmst_tags",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "dmst_bai_viets",
-            "size": 6
+            "name": "count",
+            "size": 4
           }
         ]
       ]
     },
-    "uid": "api::dmst-loai-bai-viet.dmst-loai-bai-viet"
+    "uid": "plugin::slugify.slug"
   },
   "type": "object",
   "environment": null,
