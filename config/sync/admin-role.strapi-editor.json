@@ -458,13 +458,6 @@
       "conditions": []
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
-      "properties": {},
-      "conditions": []
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::dmst-loai-bai-viet.dmst-loai-bai-viet",

@@ -3,8 +3,9 @@ export default () => ({
     enabled: true,
     resolve: "./src/plugins/custom-tag-input",
   },
-  'documentation': {
-    enabled: process.env.NODE_ENV === 'production',  // Chỉ bật khi ở production
+  documentation: {
+    // enabled: process.env.NODE_ENV === "production", // Chỉ bật khi ở production
+    enabled: process.env.NODE_ENV === "development"
   },
   slugify: {
     enabled: true,

@@ -16,10 +16,11 @@ export default [
         directives: {
           "script-src": ["'self'", "'unsafe-inline'"],
           "img-src": [
-            "'self'",
+            "self",
             "data:",
             "https://images.squarespace-cdn.com/",
-            "strapi.io",
+            "*.strapi.io",
+            `http://localhost:${process.env.PORT}`,
           ],
         },
       },

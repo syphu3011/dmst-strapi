@@ -12,7 +12,7 @@ export default factories.createCoreController(
         "api::dmst-bai-viet.dmst-bai-viet",
         {
           fields: "*",
-          populate: ["like_bai_viet"],
+          populate: ["like_bai_viet", "noi_dung_bai_viet"],
         }
       );
       if (Array.isArray(rs)) {
@@ -31,7 +31,7 @@ export default factories.createCoreController(
         ctx.params.id,
         {
           fields: "*",
-          populate: ["like_bai_viet"],
+          populate: ["like_bai_viet", "noi_dung_bai_viet"],
         }
       );
       rs["like"] = rs.like_bai_viet?.like ?? 0;
