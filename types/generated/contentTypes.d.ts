@@ -928,7 +928,7 @@ export interface ApiDmstBaiVietDmstBaiViet extends Schema.CollectionType {
   };
   attributes: {
     noi_dung_bai_viet: Attribute.Component<'reuse-component.bai-viet'>;
-    ten_bai_viet: Attribute.String;
+    ten_bai_viet: Attribute.String & Attribute.Required;
     loai_va_tag: Attribute.JSON &
       Attribute.CustomField<'plugin::custom-tag-input.tags'>;
     dmst_tags: Attribute.Relation<
@@ -948,6 +948,13 @@ export interface ApiDmstBaiVietDmstBaiViet extends Schema.CollectionType {
       'manyToOne',
       'api::like-bai-viet.like-bai-viet'
     >;
+    anh_dai_dien: Attribute.Media<'images'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1036,41 +1043,6 @@ export interface ApiDmstHeSinhThaiDmstHeSinhThai extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::dmst-he-sinh-thai.dmst-he-sinh-thai',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiDmstHeaderDmstHeader extends Schema.SingleType {
-  collectionName: 'dmst_headers';
-  info: {
-    singularName: 'dmst-header';
-    pluralName: 'dmst-headers';
-    displayName: 'DMST Header';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Logo: Attribute.Media<'images'>;
-    dmst_link_don_gians: Attribute.Relation<
-      'api::dmst-header.dmst-header',
-      'oneToMany',
-      'api::dmst-link-don-gian.dmst-link-don-gian'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::dmst-header.dmst-header',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::dmst-header.dmst-header',
       'oneToOne',
       'admin::user'
     > &
@@ -1385,6 +1357,7 @@ export interface ApiLikeBaiVietLikeBaiViet extends Schema.CollectionType {
       'oneToMany',
       'api::dmst-bai-viet.dmst-bai-viet'
     >;
+    text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1426,7 +1399,6 @@ declare module '@strapi/types' {
       'api::dmst-bai-viet.dmst-bai-viet': ApiDmstBaiVietDmstBaiViet;
       'api::dmst-banner.dmst-banner': ApiDmstBannerDmstBanner;
       'api::dmst-he-sinh-thai.dmst-he-sinh-thai': ApiDmstHeSinhThaiDmstHeSinhThai;
-      'api::dmst-header.dmst-header': ApiDmstHeaderDmstHeader;
       'api::dmst-link-co-anh.dmst-link-co-anh': ApiDmstLinkCoAnhDmstLinkCoAnh;
       'api::dmst-link-don-gian.dmst-link-don-gian': ApiDmstLinkDonGianDmstLinkDonGian;
       'api::dmst-loai-bai-viet.dmst-loai-bai-viet': ApiDmstLoaiBaiVietDmstLoaiBaiViet;

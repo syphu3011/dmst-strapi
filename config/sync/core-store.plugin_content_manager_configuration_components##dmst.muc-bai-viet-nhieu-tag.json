@@ -21,7 +21,7 @@
       },
       "loai_va_tag": {
         "edit": {
-          "label": "loai_va_tag",
+          "label": "Loại và tags",
           "description": "",
           "placeholder": "",
           "visible": true,

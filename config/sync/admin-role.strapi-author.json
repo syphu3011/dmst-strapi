@@ -96,7 +96,8 @@
           "SEO.structuredData",
           "SEO.metaViewport",
           "SEO.canonicalURL",
-          "like_bai_viet"
+          "like_bai_viet",
+          "anh_dai_dien"
         ]
       },
       "conditions": [
@@ -139,7 +140,8 @@
           "SEO.structuredData",
           "SEO.metaViewport",
           "SEO.canonicalURL",
-          "like_bai_viet"
+          "like_bai_viet",
+          "anh_dai_dien"
         ]
       },
       "conditions": [
@@ -173,7 +175,8 @@
           "SEO.structuredData",
           "SEO.metaViewport",
           "SEO.canonicalURL",
-          "like_bai_viet"
+          "like_bai_viet",
+          "anh_dai_dien"
         ]
       },
       "conditions": [
@@ -282,57 +285,6 @@
           "ten",
           "link",
           "dmst_thanh_vien_hsts"
-        ]
-      },
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {
-        "fields": [
-          "Logo",
-          "dmst_link_don_gians"
-        ]
-      },
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {
-        "fields": [
-          "Logo",
-          "dmst_link_don_gians"
-        ]
-      },
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {
-        "fields": [
-          "Logo",
-          "dmst_link_don_gians"
         ]
       },
       "conditions": [

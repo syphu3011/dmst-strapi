@@ -21,7 +21,7 @@
       },
       "noi_dung": {
         "edit": {
-          "label": "noi_dung",
+          "label": "Nội dung",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -121,22 +121,16 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "Header",
-        "Footer",
-        "createdAt"
-      ],
       "edit": [
         [
           {
-            "name": "noi_dung",
+            "name": "Header",
             "size": 12
           }
         ],
         [
           {
-            "name": "Header",
+            "name": "noi_dung",
             "size": 12
           }
         ],
@@ -146,6 +140,12 @@
             "size": 12
           }
         ]
+      ],
+      "list": [
+        "id",
+        "Header",
+        "Footer",
+        "createdAt"
       ]
     },
     "uid": "api::dmst-trang-chu.dmst-trang-chu"

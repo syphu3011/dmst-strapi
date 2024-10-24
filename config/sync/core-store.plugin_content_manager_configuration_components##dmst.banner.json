@@ -21,7 +21,7 @@
       },
       "dmst_banners": {
         "edit": {
-          "label": "dmst_banners",
+          "label": "Banners",
           "description": "",
           "placeholder": "",
           "visible": true,

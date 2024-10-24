@@ -7,16 +7,19 @@
   "options": {},
   "attributes": {
     "mo_ta": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "tac_gia": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "nguon": {
       "type": "string"
     },
     "noi_dung": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

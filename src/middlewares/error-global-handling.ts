@@ -9,7 +9,7 @@ import type {
 } from "koa";
 
 const errorHandler = (config: any, { strapi }: { strapi: Strapi }) => {
-  async (ctx: Context, next: () => Promise<void>) => {
+  return async (ctx: Context, next: () => Promise<void>) => {
     try {
       await next();
     } catch (error) {

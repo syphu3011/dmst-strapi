@@ -20,6 +20,9 @@
       "relation": "oneToMany",
       "target": "api::dmst-bai-viet.dmst-bai-viet",
       "mappedBy": "like_bai_viet"
+    },
+    "text": {
+      "type": "string"
     }
   }
 }

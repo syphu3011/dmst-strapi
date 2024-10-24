@@ -5,7 +5,7 @@ export default () => ({
   },
   documentation: {
     // enabled: process.env.NODE_ENV === "production", // Chỉ bật khi ở production
-    enabled: process.env.NODE_ENV === "development"
+    enabled: process.env.NODE_ENV === "development",
   },
   slugify: {
     enabled: true,
@@ -25,7 +25,7 @@ export default () => ({
     config: {
       provider: {
         name: "memory",
-        getTimeout: 500,
+        getTimeout: 5000,
         options: {
           // The maximum size of the cache
           max: 32767,
@@ -35,9 +35,9 @@ export default () => ({
         },
       },
       strategy: /* @type {CachePluginStrategy} */ {
-        keysPrefix: "project-name",
+        keysPrefix: "doi-moi-sang-tao",
         maxAge: 3600000,
-        debug: true,
+        debug: false,
         contentTypes: [
           "api::dmst-bai-viet.dmst-bai-viet",
           "api::dmst-trang-chu.dmst-trang-chu",
@@ -47,5 +47,11 @@ export default () => ({
   },
   "content-versioning": {
     enabled: true,
+  },
+  settings: {
+    gzip: {
+      enabled: true,
+      options: { level: 6 },
+    },
   },
 });

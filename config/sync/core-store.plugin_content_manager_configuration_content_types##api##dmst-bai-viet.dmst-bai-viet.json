@@ -125,13 +125,27 @@
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true,
+          "editable": false,
           "mainField": "like"
         },
         "list": {
           "label": "like_bai_viet",
           "searchable": true,
           "sortable": true
+        }
+      },
+      "anh_dai_dien": {
+        "edit": {
+          "label": "Ảnh đại diện",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "anh_dai_dien",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -199,6 +213,12 @@
           {
             "name": "ten_bai_viet",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "anh_dai_dien",
+            "size": 12
           }
         ],
         [

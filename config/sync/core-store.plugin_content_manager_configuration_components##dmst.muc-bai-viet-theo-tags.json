@@ -21,7 +21,7 @@
       },
       "dmst_tags": {
         "edit": {
-          "label": "dmst_tags",
+          "label": "Tags",
           "description": "",
           "placeholder": "",
           "visible": true,

@@ -21,7 +21,7 @@
       },
       "dmst_loai_bai_viets": {
         "edit": {
-          "label": "dmst_loai_bai_viets",
+          "label": "Loại bài viết",
           "description": "",
           "placeholder": "",
           "visible": true,

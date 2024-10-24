@@ -21,7 +21,7 @@
       },
       "logo": {
         "edit": {
-          "label": "logo",
+          "label": "Logo",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "dmst_link_don_gians": {
         "edit": {
-          "label": "dmst_link_don_gians",
+          "label": "Các đường dẫn",
           "description": "",
           "placeholder": "",
           "visible": true,

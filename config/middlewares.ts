@@ -21,10 +21,12 @@ export default [
             "https://images.squarespace-cdn.com/",
             "*.strapi.io",
             `http://localhost:${process.env.PORT}`,
+            "https://multiply-sound-goose.ngrok-free.app/",
           ],
         },
       },
     },
   },
   "global::error-global-handling",
+  "global::rate-limit"
 ];

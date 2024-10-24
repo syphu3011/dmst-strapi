@@ -21,7 +21,7 @@
       },
       "doc_nhanh": {
         "edit": {
-          "label": "doc_nhanh",
+          "label": "Đọc nhanh",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "tags": {
         "edit": {
-          "label": "tags",
+          "label": "Tags",
           "description": "",
           "placeholder": "",
           "visible": true,

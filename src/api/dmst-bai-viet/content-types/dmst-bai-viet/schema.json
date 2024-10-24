@@ -22,7 +22,8 @@
       "component": "reuse-component.bai-viet"
     },
     "ten_bai_viet": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "loai_va_tag": {
       "type": "customField",
@@ -53,6 +54,19 @@
       "relation": "manyToOne",
       "target": "api::like-bai-viet.like-bai-viet",
       "inversedBy": "dmst_bai_viets"
+    },
+    "anh_dai_dien": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "required": true
     }
   }
 }

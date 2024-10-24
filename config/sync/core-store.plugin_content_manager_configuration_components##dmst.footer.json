@@ -21,7 +21,7 @@
       },
       "ten_trang": {
         "edit": {
-          "label": "ten_trang",
+          "label": "Tên trang",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "dia_chi": {
         "edit": {
-          "label": "dia_chi",
+          "label": "Địa chỉ",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -49,7 +49,7 @@
       },
       "email": {
         "edit": {
-          "label": "email",
+          "label": "Email",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -63,7 +63,7 @@
       },
       "so_dien_thoai": {
         "edit": {
-          "label": "so_dien_thoai",
+          "label": "Số điện thoại",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -77,7 +77,7 @@
       },
       "dmst_link_don_gians": {
         "edit": {
-          "label": "dmst_link_don_gians",
+          "label": "Các đường dẫn",
           "description": "",
           "placeholder": "",
           "visible": true,

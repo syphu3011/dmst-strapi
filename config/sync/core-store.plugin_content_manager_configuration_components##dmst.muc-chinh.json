@@ -21,7 +21,7 @@
       },
       "bai_viet_theo_loai": {
         "edit": {
-          "label": "bai_viet_theo_loai",
+          "label": "Bài viết theo loại",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "tags_theo_loai": {
         "edit": {
-          "label": "tags_theo_loai",
+          "label": "Tags theo loại",
           "description": "",
           "placeholder": "",
           "visible": true,

@@ -95,7 +95,8 @@
           "SEO.structuredData",
           "SEO.metaViewport",
           "SEO.canonicalURL",
-          "like_bai_viet"
+          "like_bai_viet",
+          "anh_dai_dien"
         ]
       },
       "conditions": []
@@ -141,7 +142,8 @@
           "SEO.structuredData",
           "SEO.metaViewport",
           "SEO.canonicalURL",
-          "like_bai_viet"
+          "like_bai_viet",
+          "anh_dai_dien"
         ]
       },
       "conditions": []
@@ -173,7 +175,8 @@
           "SEO.structuredData",
           "SEO.metaViewport",
           "SEO.canonicalURL",
-          "like_bai_viet"
+          "like_bai_viet",
+          "anh_dai_dien"
         ]
       },
       "conditions": []
@@ -280,56 +283,6 @@
           "ten",
           "link",
           "dmst_thanh_vien_hsts"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {
-        "fields": [
-          "Logo",
-          "dmst_link_don_gians"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {
-        "fields": [
-          "Logo",
-          "dmst_link_don_gians"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::dmst-header.dmst-header",
-      "properties": {
-        "fields": [
-          "Logo",
-          "dmst_link_don_gians"
         ]
       },
       "conditions": []
@@ -769,7 +722,8 @@
       "properties": {
         "fields": [
           "like",
-          "dmst_bai_viets"
+          "dmst_bai_viets",
+          "text"
         ]
       },
       "conditions": []
@@ -788,7 +742,8 @@
       "properties": {
         "fields": [
           "like",
-          "dmst_bai_viets"
+          "dmst_bai_viets",
+          "text"
         ]
       },
       "conditions": []
@@ -800,7 +755,8 @@
       "properties": {
         "fields": [
           "like",
-          "dmst_bai_viets"
+          "dmst_bai_viets",
+          "text"
         ]
       },
       "conditions": []
@@ -1157,6 +1113,34 @@
       "conditions": []
     },
     {
+      "action": "plugin::documentation.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::documentation.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::documentation.settings.regenerate",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::documentation.settings.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
       "action": "plugin::email.settings.read",
       "actionParameters": {},
       "subject": null,
@@ -1186,6 +1170,13 @@
     },
     {
       "action": "plugin::i18n.locale.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::redis.settings.read",
       "actionParameters": {},
       "subject": null,
       "properties": {},

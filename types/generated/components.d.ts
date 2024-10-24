@@ -58,10 +58,10 @@ export interface ReuseComponentBaiViet extends Schema.Component {
     description: '';
   };
   attributes: {
-    mo_ta: Attribute.Text;
-    tac_gia: Attribute.String;
+    mo_ta: Attribute.Text & Attribute.Required;
+    tac_gia: Attribute.String & Attribute.Required;
     nguon: Attribute.String;
-    noi_dung: Attribute.RichText;
+    noi_dung: Attribute.RichText & Attribute.Required;
   };
 }
 
