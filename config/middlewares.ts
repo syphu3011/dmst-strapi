@@ -15,14 +15,17 @@ export default [
       contentSecurityPolicy: {
         directives: {
           "script-src": ["'self'", "'unsafe-inline'"],
-          "img-src": [
+          /*"img-src": [
             "self",
             "data:",
             "https://images.squarespace-cdn.com/",
             "*.strapi.io",
-            `http://localhost:${process.env.PORT}`,
+            "http://localhost:"+process.env.PORT,
+            "http://172.30.10.85:1337",
+			`http://116.109.42.111:${process.env.PORT}`,
             "https://multiply-sound-goose.ngrok-free.app/",
-          ],
+          ],*/
+		      "img-src": ["*"],
         },
       },
     },

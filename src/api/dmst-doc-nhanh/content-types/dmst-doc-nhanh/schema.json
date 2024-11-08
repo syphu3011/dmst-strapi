@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dmst_doc_nhanhs",
+  "info": {
+    "singularName": "dmst-doc-nhanh",
+    "pluralName": "dmst-doc-nhanhs",
+    "displayName": "DMST Đọc nhanh"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "anh_doc_nhanh": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "ten": {
+      "type": "string"
+    },
+    "ngay_dang": {
+      "type": "date"
+    }
+  }
+}

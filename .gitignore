@@ -113,3 +113,7 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+package-lock.json
+combined.log.json
+error.log.json
+ecosystem.config.js

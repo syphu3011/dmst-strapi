@@ -72,7 +72,6 @@ export interface DmstMucSau extends Schema.Component {
     description: '';
   };
   attributes: {
-    doc_nhanh: Attribute.Media<'images'>;
     tags: Attribute.Component<'dmst.muc-bai-viet-theo-tags'>;
   };
 }

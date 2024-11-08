@@ -56,17 +56,25 @@
       "inversedBy": "dmst_bai_viets"
     },
     "anh_dai_dien": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      }
+    },
+    "ngay_dang": {
       "pluginOptions": {
         "versions": {
           "versioned": true
         }
       },
-      "required": true
+      "type": "date"
     }
   }
 }

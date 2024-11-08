@@ -15,6 +15,11 @@ export default () => ({
           field: "slug",
           references: "ten_bai_viet",
         },
+        "dmst-he-sinh-thai": {
+          field: "link",
+          references: "ten",
+        },
+        
       },
     },
   },
@@ -41,6 +46,14 @@ export default () => ({
         contentTypes: [
           "api::dmst-bai-viet.dmst-bai-viet",
           "api::dmst-trang-chu.dmst-trang-chu",
+          {
+            contentType: "api::dmst-bai-viet.dmst-bai-viet",
+            routes: [
+              {
+                path: "/api/dmst-bai-viets/slug/:slug+",
+              },
+            ],
+          },
         ],
       },
     },

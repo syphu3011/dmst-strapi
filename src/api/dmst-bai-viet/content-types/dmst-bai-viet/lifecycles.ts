@@ -24,6 +24,9 @@ export default {
           data.dmst_tags = selectedTags.map((e) => ({ id: Number(e) }));
         }
       }
+      if (!(data["ngay_dang"])) {
+        data["ngay_dang"] = data["createdAt"].toISOString().slice(0, 10);
+      }
     } catch (e) {
       console.error(e);
     }

@@ -955,6 +955,12 @@ export interface ApiDmstBaiVietDmstBaiViet extends Schema.CollectionType {
           versioned: true;
         };
       }>;
+    ngay_dang: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1006,6 +1012,38 @@ export interface ApiDmstBannerDmstBanner extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::dmst-banner.dmst-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDmstDocNhanhDmstDocNhanh extends Schema.CollectionType {
+  collectionName: 'dmst_doc_nhanhs';
+  info: {
+    singularName: 'dmst-doc-nhanh';
+    pluralName: 'dmst-doc-nhanhs';
+    displayName: 'DMST \u0110\u1ECDc nhanh';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_doc_nhanh: Attribute.Media<'images', true>;
+    ten: Attribute.String;
+    ngay_dang: Attribute.Date;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::dmst-doc-nhanh.dmst-doc-nhanh',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::dmst-doc-nhanh.dmst-doc-nhanh',
       'oneToOne',
       'admin::user'
     > &
@@ -1398,6 +1436,7 @@ declare module '@strapi/types' {
       'api::audit-log.audit-log': ApiAuditLogAuditLog;
       'api::dmst-bai-viet.dmst-bai-viet': ApiDmstBaiVietDmstBaiViet;
       'api::dmst-banner.dmst-banner': ApiDmstBannerDmstBanner;
+      'api::dmst-doc-nhanh.dmst-doc-nhanh': ApiDmstDocNhanhDmstDocNhanh;
       'api::dmst-he-sinh-thai.dmst-he-sinh-thai': ApiDmstHeSinhThaiDmstHeSinhThai;
       'api::dmst-link-co-anh.dmst-link-co-anh': ApiDmstLinkCoAnhDmstLinkCoAnh;
       'api::dmst-link-don-gian.dmst-link-don-gian': ApiDmstLinkDonGianDmstLinkDonGian;

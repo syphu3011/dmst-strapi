@@ -19,7 +19,7 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap({ strapi }: { strapi: Strapi }) {
+  async bootstrap({ strapi }: { strapi: Strapi }) {
     process.on("uncaughtException", (error) => {
       console.error("Uncaught Exception:", error);
       // Có thể thêm logic để gửi thông báo hoặc ghi log
@@ -66,5 +66,31 @@ export default {
         console.log("User disconnected");
       });
     });
+
+    // Đánh chỉ mục
+    try {
+      // Kiểm tra xem chỉ mục đã tồn tại chưa
+      const [indexExists] = await strapi.db.connection.raw(`
+        SELECT COUNT(1) AS count
+        FROM information_schema.statistics
+        WHERE table_schema = DATABASE()
+          AND table_name = 'dmst_bai_viets'
+          AND index_name = 'idx_bai_viet_slug';
+      `);
+
+      if (indexExists[0].count === 0) {
+        // Nếu chưa tồn tại, tạo chỉ mục mới
+        await strapi.db.connection.raw(`
+          CREATE INDEX idx_bai_viet_slug ON dmst_bai_viets(slug);
+        `);
+        console.log("Tạo chỉ mục thành công với dmst_bai_viets.slug.");
+      } else {
+        console.log("Chỉ mục dmst_bai_viets.slug đã tồn tại.");
+      }
+    } catch (error) {
+      console.error("Lỗi tạo chỉ mục", error);
+    }
   },
+
+  
 };
