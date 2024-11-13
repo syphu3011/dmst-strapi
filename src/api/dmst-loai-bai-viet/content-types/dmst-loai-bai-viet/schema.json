@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -26,6 +26,9 @@
       "relation": "manyToMany",
       "target": "api::dmst-bai-viet.dmst-bai-viet",
       "mappedBy": "dmst_loai_bai_viets"
+    },
+    "slug": {
+      "type": "text"
     }
   }
 }

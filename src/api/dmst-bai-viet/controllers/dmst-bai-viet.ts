@@ -12,7 +12,14 @@ export default factories.createCoreController(
         "api::dmst-bai-viet.dmst-bai-viet",
         {
           fields: "*",
-          populate: ["like_bai_viet", "noi_dung_bai_viet"],
+          populate: {
+            like_bai_viet: {},
+            noi_dung_bai_viet: {
+              fields: ["id", "mo_ta", "nguon"],
+            },
+          },
+          sort: { ngay_dang: "desc" },
+          filters: { publishedAt: { $ne: null } },
         }
       );
       if (Array.isArray(rs)) {
@@ -25,18 +32,18 @@ export default factories.createCoreController(
       }
       return rs;
     },
-    async findOne(ctx) {
-      const rs = await strapi.entityService.findOne(
-        "api::dmst-bai-viet.dmst-bai-viet",
-        ctx.params.id,
-        {
-          fields: "*",
-          populate: ["like_bai_viet", "noi_dung_bai_viet"],
-        }
-      );
-      rs["like"] = rs.like_bai_viet?.like ?? 0;
-      return rs;
-    },
+    // async findOne(ctx) {
+    //   const rs = await strapi.entityService.findOne(
+    //     "api::dmst-bai-viet.dmst-bai-viet",
+    //     ctx.params.id,
+    //     {
+    //       fields: "*",
+    //       populate: ["like_bai_viet", "noi_dung_bai_viet"],
+    //     }
+    //   );
+    //   rs["like"] = rs.like_bai_viet?.like ?? 0;
+    //   return rs;
+    // },
     async findBySlug(ctx) {
       const { slug } = ctx.params;
       // Kiểm tra nếu slug không tồn tại trong yêu cầu
@@ -48,9 +55,21 @@ export default factories.createCoreController(
       const entity = await strapi.entityService.findMany(
         "api::dmst-bai-viet.dmst-bai-viet",
         {
-          filters: { slug }, // Tìm bài viết theo slug
+          sort: { ngay_dang: "desc" },
+          filters: { slug, publishedAt: { $ne: null } },
           fields: "*",
-          populate: ["like_bai_viet", "noi_dung_bai_viet"],
+          populate: {
+            like_bai_viet: {},
+            noi_dung_bai_viet: {
+              fields: ["id", "mo_ta", "nguon"],
+            },
+            dmst_loai_bai_viets: {
+              fields: ["loai", "slug"],
+            },
+            dmst_tags: {
+              fields: ["tag", "slug"],
+            }
+          },
         }
       );
 

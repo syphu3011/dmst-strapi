@@ -1025,6 +1025,7 @@ export interface ApiDmstDocNhanhDmstDocNhanh extends Schema.CollectionType {
     singularName: 'dmst-doc-nhanh';
     pluralName: 'dmst-doc-nhanhs';
     displayName: 'DMST \u0110\u1ECDc nhanh';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1033,6 +1034,7 @@ export interface ApiDmstDocNhanhDmstDocNhanh extends Schema.CollectionType {
     anh_doc_nhanh: Attribute.Media<'images', true>;
     ten: Attribute.String;
     ngay_dang: Attribute.Date;
+    slug: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1057,6 +1059,7 @@ export interface ApiDmstHeSinhThaiDmstHeSinhThai extends Schema.CollectionType {
     singularName: 'dmst-he-sinh-thai';
     pluralName: 'dmst-he-sinh-thais';
     displayName: 'DMST H\u1EC7 sinh th\u00E1i';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1064,12 +1067,12 @@ export interface ApiDmstHeSinhThaiDmstHeSinhThai extends Schema.CollectionType {
   attributes: {
     anh_dai_dien: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     ten: Attribute.String;
-    link: Attribute.String;
     dmst_thanh_vien_hsts: Attribute.Relation<
       'api::dmst-he-sinh-thai.dmst-he-sinh-thai',
       'oneToMany',
       'api::dmst-thanh-vien-hst.dmst-thanh-vien-hst'
     >;
+    slug: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1162,7 +1165,7 @@ export interface ApiDmstLoaiBaiVietDmstLoaiBaiViet
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     loai: Attribute.String;
@@ -1176,8 +1179,10 @@ export interface ApiDmstLoaiBaiVietDmstLoaiBaiViet
       'manyToMany',
       'api::dmst-bai-viet.dmst-bai-viet'
     >;
+    slug: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::dmst-loai-bai-viet.dmst-loai-bai-viet',
       'oneToOne',
@@ -1229,6 +1234,7 @@ export interface ApiDmstTagDmstTag extends Schema.CollectionType {
     singularName: 'dmst-tag';
     pluralName: 'dmst-tags';
     displayName: 'DMST Tag';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1245,6 +1251,7 @@ export interface ApiDmstTagDmstTag extends Schema.CollectionType {
       'manyToMany',
       'api::dmst-bai-viet.dmst-bai-viet'
     >;
+    slug: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1273,7 +1280,7 @@ export interface ApiDmstThanhVienHstDmstThanhVienHst
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     ten_thanh_vien: Attribute.String;
@@ -1284,8 +1291,10 @@ export interface ApiDmstThanhVienHstDmstThanhVienHst
       'manyToOne',
       'api::dmst-he-sinh-thai.dmst-he-sinh-thai'
     >;
+    slug: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::dmst-thanh-vien-hst.dmst-thanh-vien-hst',
       'oneToOne',
@@ -1359,6 +1368,8 @@ export interface ApiDmstVideoDmstVideo extends Schema.CollectionType {
     mo_ta: Attribute.Text;
     ten_video: Attribute.String;
     link_embed: Attribute.String;
+    slug: Attribute.Text;
+    ngay_dang: Attribute.Date;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

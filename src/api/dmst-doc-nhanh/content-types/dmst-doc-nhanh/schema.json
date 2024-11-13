@@ -4,7 +4,8 @@
   "info": {
     "singularName": "dmst-doc-nhanh",
     "pluralName": "dmst-doc-nhanhs",
-    "displayName": "DMST Đọc nhanh"
+    "displayName": "DMST Đọc nhanh",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,17 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "anh_doc_nhanh": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "ten": {
       "type": "string"
     },
     "ngay_dang": {
       "type": "date"
+    },
+    "slug": {
+      "type": "text"
     }
   }
 }

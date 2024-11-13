@@ -106,6 +106,8 @@ coverage
 ############################
 
 .env
+.env.dev
+.env.prod
 license.txt
 exports
 .strapi
@@ -117,3 +119,4 @@ package-lock.json
 combined.log.json
 error.log.json
 ecosystem.config.js
+error.log.json

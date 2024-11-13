@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -28,6 +28,9 @@
       "relation": "manyToOne",
       "target": "api::dmst-he-sinh-thai.dmst-he-sinh-thai",
       "inversedBy": "dmst_thanh_vien_hsts"
+    },
+    "slug": {
+      "type": "text"
     }
   }
 }

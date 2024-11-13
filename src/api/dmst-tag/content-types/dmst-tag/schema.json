@@ -4,7 +4,8 @@
   "info": {
     "singularName": "dmst-tag",
     "pluralName": "dmst-tags",
-    "displayName": "DMST Tag"
+    "displayName": "DMST Tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,9 @@
       "relation": "manyToMany",
       "target": "api::dmst-bai-viet.dmst-bai-viet",
       "mappedBy": "dmst_tags"
+    },
+    "slug": {
+      "type": "text"
     }
   }
 }

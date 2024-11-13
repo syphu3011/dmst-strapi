@@ -3,6 +3,7 @@
  */
 
  import { Strapi, factories } from "@strapi/strapi";
+import fetchBaiViets from "../../../functions/fetchBaiViets";
 
  export default factories.createCoreController(
    "api::dmst-trang-chu.dmst-trang-chu",
@@ -161,7 +162,7 @@
             },
             limit: 10,
             sort: {
-              publishedAt:  "desc",
+              ngay_dang:  "desc",
             }
           })
           nd["dmst-videos"] = videos
@@ -229,24 +230,4 @@
      },
    })
  );
- async function fetchBaiViets(strapi: Strapi, filters: {}, limit = 3) {
-   return await strapi.entityService.findMany(
-     "api::dmst-bai-viet.dmst-bai-viet",
-     {
-       populate: {
-         noi_dung_bai_viet: {
-           fields: ["id", "mo_ta"],
-         },
-         like_bai_viet: {
-           fields: ["id", "like"],
-         },
-         anh_dai_dien: {
-         }
-       },
-       filters: filters,
-       sort: { createdAt: "desc" },
-       limit: limit,
-     }
-   );
- }
- 
+

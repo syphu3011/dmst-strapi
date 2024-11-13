@@ -20,6 +20,12 @@
     },
     "link_embed": {
       "type": "string"
+    },
+    "slug": {
+      "type": "text"
+    },
+    "ngay_dang": {
+      "type": "date"
     }
   }
 }

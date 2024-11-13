@@ -1,0 +1,36 @@
+version: "3"
+services:
+  doimoisangtao-strapi-dev:
+    container_name: doimoisangtao-strapi-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: doimoisangtao-strapi-dev:latest
+    restart: unless-stopped
+    env_file: .env.dev
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      APP_KEYS: ${APP_KEYS}
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ./config:/opt/app/config
+      - ./src:/opt/app/src
+      - ./public/uploads:/opt/app/public/uploads
+    ports:
+      - "1336:1336"
+    networks:
+      - doimoisangtao-network
+volumes:
+  doimoisangtao-strapi-dev-data:
+
+networks:
+  doimoisangtao-network:
+    external: true

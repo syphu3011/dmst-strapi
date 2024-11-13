@@ -4,7 +4,8 @@
   "info": {
     "singularName": "dmst-he-sinh-thai",
     "pluralName": "dmst-he-sinh-thais",
-    "displayName": "DMST Hệ sinh thái"
+    "displayName": "DMST Hệ sinh thái",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,19 +13,17 @@
   "pluginOptions": {},
   "attributes": {
     "anh_dai_dien": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "ten": {
-      "type": "string"
-    },
-    "link": {
       "type": "string"
     },
     "dmst_thanh_vien_hsts": {
@@ -32,6 +31,9 @@
       "relation": "oneToMany",
       "target": "api::dmst-thanh-vien-hst.dmst-thanh-vien-hst",
       "mappedBy": "dmst_he_sinh_thai"
+    },
+    "slug": {
+      "type": "text"
     }
   }
 }
