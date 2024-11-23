@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skcd_link_don_gians",
+  "info": {
+    "singularName": "skcd-link-don-gian",
+    "pluralName": "skcd-link-don-gians",
+    "displayName": "SKCD Link đơn giản"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ten": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

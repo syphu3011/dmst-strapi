@@ -3,6 +3,10 @@ export default () => ({
     enabled: true,
     resolve: "./src/plugins/custom-tag-input",
   },
+  "custom-tag-input-skcd": {
+    enabled: true,
+    resolve: "./src/plugins/custom-tag-input-skcd",
+  },
   documentation: {
     // enabled: process.env.NODE_ENV === "production", // Chỉ bật khi ở production
     enabled: process.env.NODE_ENV === "development",
@@ -36,6 +40,26 @@ export default () => ({
           references: "ten_video",
         },
         "dmst-doc-nhanh": {
+          field: "slug",
+          references: "ten",
+        },
+        "skcd-bai-viet": {
+          field: "slug",
+          references: "ten_bai_viet",
+        },
+        "skcd-loai-bai-viet": {
+          field: "slug",
+          references: "loai",
+        },
+        "skcd-tag": {
+          field: "slug",
+          references: "tag",
+        },
+        "skcd-video": {
+          field: "slug",
+          references: "ten",
+        },
+        "skcd-doi-tac": {
           field: "slug",
           references: "ten",
         },

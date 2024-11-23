@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_skcd_videos",
+  "info": {
+    "displayName": "Video"
+  },
+  "options": {},
+  "attributes": {
+    "skcd_videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skcd-video.skcd-video"
+    }
+  }
+}

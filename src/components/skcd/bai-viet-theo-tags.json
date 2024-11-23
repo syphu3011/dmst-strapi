@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_skcd_bai_viet_theo_tags",
+  "info": {
+    "displayName": "Bài viết theo tags"
+  },
+  "options": {},
+  "attributes": {
+    "skcd_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skcd-tag.skcd-tag"
+    }
+  }
+}

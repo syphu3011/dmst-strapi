@@ -8,7 +8,7 @@
   "attributes": {
     "mo_ta": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "tac_gia": {
       "type": "string",

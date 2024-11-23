@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "skcd_mo_khoa_likes",
+  "info": {
+    "singularName": "skcd-mo-khoa-like",
+    "pluralName": "skcd-mo-khoa-likes",
+    "displayName": "SKCD Mở khóa like"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mo": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

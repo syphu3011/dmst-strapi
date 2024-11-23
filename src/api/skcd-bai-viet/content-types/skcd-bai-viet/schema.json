@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skcd_bai_viets",
+  "info": {
+    "singularName": "skcd-bai-viet",
+    "pluralName": "skcd-bai-viets",
+    "displayName": "SKCD Bài viết",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "versions": {
+      "versioned": true
+    }
+  },
+  "attributes": {
+    "ten_bai_viet": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "type": "string"
+    },
+    "noi_dung_bai_viet": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "component": "reuse-component.bai-viet"
+    },
+    "like_bai_viet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::like-bai-viet.like-bai-viet",
+      "inversedBy": "skcd_bai_viets"
+    },
+    "anh_dai_dien": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      }
+    },
+    "ngay_dang": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "type": "date"
+    },
+    "skcd_loai_bai_viets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skcd-loai-bai-viet.skcd-loai-bai-viet",
+      "mappedBy": "skcd_bai_viets"
+    },
+    "skcd_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skcd-tag.skcd-tag",
+      "mappedBy": "skcd_bai_viets"
+    },
+    "slug": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "type": "text"
+    },
+    "loai_va_tag": {
+      "type": "customField",
+      "customField": "plugin::custom-tag-input-skcd.tags"
+    },
+    "noi_bat": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

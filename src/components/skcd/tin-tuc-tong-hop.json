@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_skcd_tong_hops",
+  "info": {
+    "displayName": "Tổng hợp",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "skcd_bai_viets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skcd-bai-viet.skcd-bai-viet"
+    },
+    "skcd_loai_bai_viets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skcd-loai-bai-viet.skcd-loai-bai-viet"
+    },
+    "sang_kien_vui": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

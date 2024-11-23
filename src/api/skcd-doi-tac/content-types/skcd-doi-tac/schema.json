@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skcd_doi_tacs",
+  "info": {
+    "singularName": "skcd-doi-tac",
+    "pluralName": "skcd-doi-tacs",
+    "displayName": "SKCD Đối tác",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ten": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "anh_dai_dien": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

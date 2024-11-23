@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "skcd_trang_chus",
+  "info": {
+    "singularName": "skcd-trang-chu",
+    "pluralName": "skcd-trang-chus",
+    "displayName": "SKCD Trang chủ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "skcd.header"
+    },
+    "Footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "skcd.footer"
+    },
+    "noi_dung": {
+      "type": "dynamiczone",
+      "components": [
+        "skcd.video",
+        "skcd.tin-tuc-tong-hop",
+        "skcd.doi-tac",
+        "skcd.tin-tuc-noi-bat",
+        "skcd.bai-viet-theo-tags"
+      ]
+    }
+  }
+}

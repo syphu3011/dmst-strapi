@@ -1,5 +1,114 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SkcdVideo extends Schema.Component {
+  collectionName: 'components_skcd_videos';
+  info: {
+    displayName: 'Video';
+  };
+  attributes: {
+    skcd_videos: Attribute.Relation<
+      'skcd.video',
+      'oneToMany',
+      'api::skcd-video.skcd-video'
+    >;
+  };
+}
+
+export interface SkcdTinTucTongHop extends Schema.Component {
+  collectionName: 'components_skcd_tong_hops';
+  info: {
+    displayName: 'T\u1ED5ng h\u1EE3p';
+    description: '';
+  };
+  attributes: {
+    skcd_bai_viets: Attribute.Relation<
+      'skcd.tin-tuc-tong-hop',
+      'oneToMany',
+      'api::skcd-bai-viet.skcd-bai-viet'
+    >;
+    skcd_loai_bai_viets: Attribute.Relation<
+      'skcd.tin-tuc-tong-hop',
+      'oneToMany',
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet'
+    >;
+    sang_kien_vui: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
+export interface SkcdTinTucNoiBat extends Schema.Component {
+  collectionName: 'components_skcd_tin_tuc_noi_bats';
+  info: {
+    displayName: 'Tin t\u1EE9c n\u1ED5i b\u1EADt';
+    description: '';
+  };
+  attributes: {
+    skcd_bai_viets: Attribute.Relation<
+      'skcd.tin-tuc-noi-bat',
+      'oneToMany',
+      'api::skcd-bai-viet.skcd-bai-viet'
+    >;
+  };
+}
+
+export interface SkcdHeader extends Schema.Component {
+  collectionName: 'components_skcd_headers';
+  info: {
+    displayName: 'Header';
+    description: '';
+  };
+  attributes: {
+    Logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    skcd_link_don_gians: Attribute.Relation<
+      'skcd.header',
+      'oneToMany',
+      'api::skcd-link-don-gian.skcd-link-don-gian'
+    >;
+  };
+}
+
+export interface SkcdFooter extends Schema.Component {
+  collectionName: 'components_skcd_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    ten_trang: Attribute.String;
+    dia_chi: Attribute.String;
+    so_dien_thoai: Attribute.String;
+  };
+}
+
+export interface SkcdDoiTac extends Schema.Component {
+  collectionName: 'components_skcd_doi_tacs';
+  info: {
+    displayName: '\u0110\u1ED1i t\u00E1c';
+  };
+  attributes: {
+    skcd_doi_tacs: Attribute.Relation<
+      'skcd.doi-tac',
+      'oneToMany',
+      'api::skcd-doi-tac.skcd-doi-tac'
+    >;
+  };
+}
+
+export interface SkcdBaiVietTheoTags extends Schema.Component {
+  collectionName: 'components_skcd_bai_viet_theo_tags';
+  info: {
+    displayName: 'B\u00E0i vi\u1EBFt theo tags';
+  };
+  attributes: {
+    skcd_tags: Attribute.Relation<
+      'skcd.bai-viet-theo-tags',
+      'oneToMany',
+      'api::skcd-tag.skcd-tag'
+    >;
+  };
+}
+
 export interface SharedSeo extends Schema.Component {
   collectionName: 'components_shared_seos';
   info: {
@@ -58,7 +167,7 @@ export interface ReuseComponentBaiViet extends Schema.Component {
     description: '';
   };
   attributes: {
-    mo_ta: Attribute.Text & Attribute.Required;
+    mo_ta: Attribute.Text;
     tac_gia: Attribute.String & Attribute.Required;
     nguon: Attribute.String;
     noi_dung: Attribute.RichText & Attribute.Required;
@@ -195,6 +304,13 @@ export interface DmstBanner extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'skcd.video': SkcdVideo;
+      'skcd.tin-tuc-tong-hop': SkcdTinTucTongHop;
+      'skcd.tin-tuc-noi-bat': SkcdTinTucNoiBat;
+      'skcd.header': SkcdHeader;
+      'skcd.footer': SkcdFooter;
+      'skcd.doi-tac': SkcdDoiTac;
+      'skcd.bai-viet-theo-tags': SkcdBaiVietTheoTags;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
       'reuse-component.bai-viet': ReuseComponentBaiViet;

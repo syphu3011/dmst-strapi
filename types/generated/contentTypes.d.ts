@@ -929,8 +929,6 @@ export interface ApiDmstBaiVietDmstBaiViet extends Schema.CollectionType {
   attributes: {
     noi_dung_bai_viet: Attribute.Component<'reuse-component.bai-viet'>;
     ten_bai_viet: Attribute.String & Attribute.Required;
-    loai_va_tag: Attribute.JSON &
-      Attribute.CustomField<'plugin::custom-tag-input.tags'>;
     dmst_tags: Attribute.Relation<
       'api::dmst-bai-viet.dmst-bai-viet',
       'manyToMany',
@@ -1407,6 +1405,11 @@ export interface ApiLikeBaiVietLikeBaiViet extends Schema.CollectionType {
       'api::dmst-bai-viet.dmst-bai-viet'
     >;
     text: Attribute.String;
+    skcd_bai_viets: Attribute.Relation<
+      'api::like-bai-viet.like-bai-viet',
+      'oneToMany',
+      'api::skcd-bai-viet.skcd-bai-viet'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1417,6 +1420,360 @@ export interface ApiLikeBaiVietLikeBaiViet extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::like-bai-viet.like-bai-viet',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSkcdBaiVietSkcdBaiViet extends Schema.CollectionType {
+  collectionName: 'skcd_bai_viets';
+  info: {
+    singularName: 'skcd-bai-viet';
+    pluralName: 'skcd-bai-viets';
+    displayName: 'SKCD B\u00E0i vi\u1EBFt';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    versions: {
+      versioned: true;
+    };
+  };
+  attributes: {
+    ten_bai_viet: Attribute.String &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }>;
+    noi_dung_bai_viet: Attribute.Component<'reuse-component.bai-viet'> &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }>;
+    like_bai_viet: Attribute.Relation<
+      'api::skcd-bai-viet.skcd-bai-viet',
+      'manyToOne',
+      'api::like-bai-viet.like-bai-viet'
+    >;
+    anh_dai_dien: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }>;
+    ngay_dang: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }>;
+    skcd_loai_bai_viets: Attribute.Relation<
+      'api::skcd-bai-viet.skcd-bai-viet',
+      'manyToMany',
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet'
+    >;
+    skcd_tags: Attribute.Relation<
+      'api::skcd-bai-viet.skcd-bai-viet',
+      'manyToMany',
+      'api::skcd-tag.skcd-tag'
+    >;
+    slug: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }>;
+    loai_va_tag: Attribute.JSON &
+      Attribute.CustomField<'plugin::custom-tag-input-skcd.tags'>;
+    noi_bat: Attribute.Boolean &
+      Attribute.SetPluginOptions<{
+        versions: {
+          versioned: true;
+        };
+      }> &
+      Attribute.DefaultTo<false>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-bai-viet.skcd-bai-viet',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-bai-viet.skcd-bai-viet',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    versions: Attribute.Relation<
+      'api::skcd-bai-viet.skcd-bai-viet',
+      'manyToMany',
+      'api::skcd-bai-viet.skcd-bai-viet'
+    >;
+    vuid: Attribute.String;
+    versionNumber: Attribute.Integer & Attribute.DefaultTo<1>;
+    versionComment: Attribute.String;
+    isVisibleInListView: Attribute.Boolean & Attribute.DefaultTo<true>;
+  };
+}
+
+export interface ApiSkcdDoiTacSkcdDoiTac extends Schema.CollectionType {
+  collectionName: 'skcd_doi_tacs';
+  info: {
+    singularName: 'skcd-doi-tac';
+    pluralName: 'skcd-doi-tacs';
+    displayName: 'SKCD \u0110\u1ED1i t\u00E1c';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ten: Attribute.String & Attribute.Required;
+    slug: Attribute.Text;
+    link: Attribute.String & Attribute.Required;
+    anh_dai_dien: Attribute.Media<'images'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-doi-tac.skcd-doi-tac',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-doi-tac.skcd-doi-tac',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSkcdLinkDonGianSkcdLinkDonGian
+  extends Schema.CollectionType {
+  collectionName: 'skcd_link_don_gians';
+  info: {
+    singularName: 'skcd-link-don-gian';
+    pluralName: 'skcd-link-don-gians';
+    displayName: 'SKCD Link \u0111\u01A1n gi\u1EA3n';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ten: Attribute.String;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-link-don-gian.skcd-link-don-gian',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-link-don-gian.skcd-link-don-gian',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSkcdLoaiBaiVietSkcdLoaiBaiViet
+  extends Schema.CollectionType {
+  collectionName: 'skcd_loai_bai_viets';
+  info: {
+    singularName: 'skcd-loai-bai-viet';
+    pluralName: 'skcd-loai-bai-viets';
+    displayName: 'SKCD Lo\u1EA1i b\u00E0i vi\u1EBFt';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    loai: Attribute.String & Attribute.Required;
+    slug: Attribute.String;
+    skcd_bai_viets: Attribute.Relation<
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet',
+      'manyToMany',
+      'api::skcd-bai-viet.skcd-bai-viet'
+    >;
+    skcd_tags: Attribute.Relation<
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet',
+      'manyToMany',
+      'api::skcd-tag.skcd-tag'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSkcdMoKhoaLikeSkcdMoKhoaLike extends Schema.SingleType {
+  collectionName: 'skcd_mo_khoa_likes';
+  info: {
+    singularName: 'skcd-mo-khoa-like';
+    pluralName: 'skcd-mo-khoa-likes';
+    displayName: 'SKCD M\u1EDF kh\u00F3a like';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mo: Attribute.Boolean & Attribute.DefaultTo<false>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-mo-khoa-like.skcd-mo-khoa-like',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-mo-khoa-like.skcd-mo-khoa-like',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSkcdTagSkcdTag extends Schema.CollectionType {
+  collectionName: 'skcd_tags';
+  info: {
+    singularName: 'skcd-tag';
+    pluralName: 'skcd-tags';
+    displayName: 'SKCD Tag';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tag: Attribute.String;
+    slug: Attribute.Text;
+    skcd_bai_viets: Attribute.Relation<
+      'api::skcd-tag.skcd-tag',
+      'manyToMany',
+      'api::skcd-bai-viet.skcd-bai-viet'
+    >;
+    skcd_loai_bai_viets: Attribute.Relation<
+      'api::skcd-tag.skcd-tag',
+      'manyToMany',
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-tag.skcd-tag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-tag.skcd-tag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSkcdTrangChuSkcdTrangChu extends Schema.SingleType {
+  collectionName: 'skcd_trang_chus';
+  info: {
+    singularName: 'skcd-trang-chu';
+    pluralName: 'skcd-trang-chus';
+    displayName: 'SKCD Trang ch\u1EE7';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Header: Attribute.Component<'skcd.header'>;
+    Footer: Attribute.Component<'skcd.footer'>;
+    noi_dung: Attribute.DynamicZone<
+      [
+        'skcd.video',
+        'skcd.tin-tuc-tong-hop',
+        'skcd.doi-tac',
+        'skcd.tin-tuc-noi-bat',
+        'skcd.bai-viet-theo-tags'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-trang-chu.skcd-trang-chu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-trang-chu.skcd-trang-chu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSkcdVideoSkcdVideo extends Schema.CollectionType {
+  collectionName: 'skcd_videos';
+  info: {
+    singularName: 'skcd-video';
+    pluralName: 'skcd-videos';
+    displayName: 'SKCD Video';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ten: Attribute.String & Attribute.Required;
+    mo_ta: Attribute.String;
+    link_embed: Attribute.Text & Attribute.Required;
+    slug: Attribute.Text;
+    ngay_dang: Attribute.Date;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::skcd-video.skcd-video',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::skcd-video.skcd-video',
       'oneToOne',
       'admin::user'
     > &
@@ -1458,6 +1815,14 @@ declare module '@strapi/types' {
       'api::dmst-trang-chu.dmst-trang-chu': ApiDmstTrangChuDmstTrangChu;
       'api::dmst-video.dmst-video': ApiDmstVideoDmstVideo;
       'api::like-bai-viet.like-bai-viet': ApiLikeBaiVietLikeBaiViet;
+      'api::skcd-bai-viet.skcd-bai-viet': ApiSkcdBaiVietSkcdBaiViet;
+      'api::skcd-doi-tac.skcd-doi-tac': ApiSkcdDoiTacSkcdDoiTac;
+      'api::skcd-link-don-gian.skcd-link-don-gian': ApiSkcdLinkDonGianSkcdLinkDonGian;
+      'api::skcd-loai-bai-viet.skcd-loai-bai-viet': ApiSkcdLoaiBaiVietSkcdLoaiBaiViet;
+      'api::skcd-mo-khoa-like.skcd-mo-khoa-like': ApiSkcdMoKhoaLikeSkcdMoKhoaLike;
+      'api::skcd-tag.skcd-tag': ApiSkcdTagSkcdTag;
+      'api::skcd-trang-chu.skcd-trang-chu': ApiSkcdTrangChuSkcdTrangChu;
+      'api::skcd-video.skcd-video': ApiSkcdVideoSkcdVideo;
     }
   }
 }

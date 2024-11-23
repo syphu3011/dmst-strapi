@@ -90,11 +90,11 @@ const Input: React.FC<InputProps> = (input: InputProps) => {
     <div>
       {/* Select for Article Type */}
       <Select label="Loại bài viết" onChange={handleArticleTypeChange} value={articleTypeId}>
-        {articleTypes.map((type: any) => (
-          <Option key={type.id} value={type.id}>
+        {articleTypes.map((type: any) => {
+          return (<Option key={type.id} value={type.id}>
             {type.label}
-          </Option>
-        ))}
+          </Option>)
+})}
       </Select>
 
       {/* Select for Tags */}

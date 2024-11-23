@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_skcd_doi_tacs",
+  "info": {
+    "displayName": "Đối tác"
+  },
+  "options": {},
+  "attributes": {
+    "skcd_doi_tacs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skcd-doi-tac.skcd-doi-tac"
+    }
+  }
+}

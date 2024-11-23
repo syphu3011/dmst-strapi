@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_skcd_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "ten_trang": {
+      "type": "string"
+    },
+    "dia_chi": {
+      "type": "string"
+    },
+    "so_dien_thoai": {
+      "type": "string"
+    }
+  }
+}

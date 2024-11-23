@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_skcd_tin_tuc_noi_bats",
+  "info": {
+    "displayName": "Tin tức nổi bật",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "skcd_bai_viets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skcd-bai-viet.skcd-bai-viet"
+    }
+  }
+}

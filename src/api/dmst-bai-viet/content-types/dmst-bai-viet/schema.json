@@ -25,10 +25,6 @@
       "type": "string",
       "required": true
     },
-    "loai_va_tag": {
-      "type": "customField",
-      "customField": "plugin::custom-tag-input.tags"
-    },
     "dmst_tags": {
       "type": "relation",
       "relation": "manyToMany",

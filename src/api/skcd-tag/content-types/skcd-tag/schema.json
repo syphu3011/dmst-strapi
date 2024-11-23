@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skcd_tags",
+  "info": {
+    "singularName": "skcd-tag",
+    "pluralName": "skcd-tags",
+    "displayName": "SKCD Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "text"
+    },
+    "skcd_bai_viets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skcd-bai-viet.skcd-bai-viet",
+      "inversedBy": "skcd_tags"
+    },
+    "skcd_loai_bai_viets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skcd-loai-bai-viet.skcd-loai-bai-viet",
+      "inversedBy": "skcd_tags"
+    }
+  }
+}

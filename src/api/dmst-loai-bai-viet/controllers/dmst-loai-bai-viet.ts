@@ -9,32 +9,32 @@ import CONFIG_VAR from '../../../config/CONFIG_VAR';
 export default factories.createCoreController(
   "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
   ({ strapi }: { strapi: Strapi }) => ({
-    async find(ctx) {
-      return await strapi.entityService.findMany(
-        "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
-        {
-          fields: "*",
-          filters: { publishedAt: { $ne: null } },
-          populate: {
-            dmst_tags: {
-              fields: ["id", "tag", "slug"],
-              populate: {
-                dmst_bai_viets: {
-                  fields: ["ten_bai_viet", "slug", "ngay_dang"],
-                  filters: { publishedAt: { $ne: null } },
-                  populate: {
-                    noi_dung_bai_viet: {
-                      fields: ["mo_ta"],
-                    },
-                  },
-                  sort: { ngay_dang: "desc" }, // Sắp xếp theo ngày đăng mới nhất
-                },
-              },
-            },
-          },
-        }
-      );
-    },
+    // async find(ctx) {
+    //   return await strapi.entityService.findMany(
+    //     "api::dmst-loai-bai-viet.dmst-loai-bai-viet",
+    //     {
+    //       fields: "*",
+    //       filters: { publishedAt: { $ne: null } },
+    //       populate: {
+    //         dmst_tags: {
+    //           fields: ["id", "tag", "slug"],
+    //           populate: {
+    //             dmst_bai_viets: {
+    //               fields: ["ten_bai_viet", "slug", "ngay_dang"],
+    //               filters: { publishedAt: { $ne: null } },
+    //               populate: {
+    //                 noi_dung_bai_viet: {
+    //                   fields: ["mo_ta"],
+    //                 },
+    //               },
+    //               sort: { ngay_dang: "desc" }, // Sắp xếp theo ngày đăng mới nhất
+    //             },
+    //           },
+    //         },
+    //       },
+    //     }
+    //   );
+    // },
     // async findOne(ctx) {
     //   return await strapi.entityService.findOne(
     //     "api::dmst-loai-bai-viet.dmst-loai-bai-viet",

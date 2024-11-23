@@ -15,24 +15,24 @@ export default factories.createCoreController(
       });
       return tags;
     },
-    async find(ctx) {
-      return await strapi.entityService.findMany("api::dmst-tag.dmst-tag", {
-        fields: ["tag", "slug"],
-        populate: {
-          dmst_bai_viets: {
-            fields: ["ten_bai_viet", "slug"],
-            populate: {
-              noi_dung_bai_viet: {
-                fields: ["mo_ta", "tac_gia"],
-              },
-            },
-            sort: { ngay_dang: "desc" },
-            filters: { publishedAt: { $ne: null } },
-          },
-        },
-        filters: { publishedAt: { $ne: null } },
-      });
-    },
+    // async find(ctx) {
+    //   return await strapi.entityService.findMany("api::dmst-tag.dmst-tag", {
+    //     fields: ["tag", "slug"],
+    //     populate: {
+    //       dmst_bai_viets: {
+    //         fields: ["ten_bai_viet", "slug"],
+    //         populate: {
+    //           noi_dung_bai_viet: {
+    //             fields: ["mo_ta", "tac_gia"],
+    //           },
+    //         },
+    //         sort: { ngay_dang: "desc" },
+    //         filters: { publishedAt: { $ne: null } },
+    //       },
+    //     },
+    //     filters: { publishedAt: { $ne: null } },
+    //   });
+    // },
     async findBySlug(ctx) {
       const { slug } = ctx.params;
       const { page } = ctx.query

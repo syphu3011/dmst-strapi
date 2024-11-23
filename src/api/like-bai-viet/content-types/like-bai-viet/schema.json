@@ -23,6 +23,12 @@
     },
     "text": {
       "type": "string"
+    },
+    "skcd_bai_viets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skcd-bai-viet.skcd-bai-viet",
+      "mappedBy": "like_bai_viet"
     }
   }
 }

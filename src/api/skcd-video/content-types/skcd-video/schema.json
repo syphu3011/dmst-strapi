@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skcd_videos",
+  "info": {
+    "singularName": "skcd-video",
+    "pluralName": "skcd-videos",
+    "displayName": "SKCD Video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ten": {
+      "type": "string",
+      "required": true
+    },
+    "mo_ta": {
+      "type": "string"
+    },
+    "link_embed": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "text"
+    },
+    "ngay_dang": {
+      "type": "date"
+    }
+  }
+}

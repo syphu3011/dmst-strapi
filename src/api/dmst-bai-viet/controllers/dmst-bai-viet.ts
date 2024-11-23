@@ -61,7 +61,7 @@ export default factories.createCoreController(
           populate: {
             like_bai_viet: {},
             noi_dung_bai_viet: {
-              fields: ["id", "mo_ta", "nguon"],
+              fields: ["id", "mo_ta", "noi_dung", "tac_gia", "nguon"],
             },
             dmst_loai_bai_viets: {
               fields: ["loai", "slug"],
