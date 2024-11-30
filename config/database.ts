@@ -2,14 +2,14 @@ import path from 'path';
 
 export default ({ env }) => {
   const client = env('DATABASE_CLIENT', 'sqlite');
-
+  const TENANT_ID = env('TENANT_ID', null)
   const connections = {
     mysql: {
       connection: {
         connectionString: env("DATABASE_URL"),
         host: env("DATABASE_HOST", "localhost"),
         port: env.int("DATABASE_PORT", 3306),
-        database: env("DATABASE_NAME", "strapi"),
+        database: TENANT_ID ? "SKCD" + TENANT_ID : env("DATABASE_NAME", "strapi"),
         user: env("DATABASE_USERNAME", "strapi"),
         password: env("DATABASE_PASSWORD", "strapi"),
         ssl: env.bool("DATABASE_SSL", false) && {
